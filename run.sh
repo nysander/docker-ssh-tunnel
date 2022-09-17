@@ -30,6 +30,6 @@ echo "starting SSH proxy $LOCAL_PORT:$REMOTE_SERVER_IP:$REMOTE_PORT on $SSH_USER
 -o ExitOnForwardFailure=yes \
 -o StrictHostKeyChecking=no \
 -L $LOCAL_PORT:$REMOTE_SERVER_IP:$REMOTE_PORT \
-$SSH_USER@$SSH_BASTION_HOST \
+$SSH_USER:$SSH_PASSWORD@$SSH_BASTION_HOST \
 -p $SSH_PORT \
 -i /ssh_key/id_rsa
